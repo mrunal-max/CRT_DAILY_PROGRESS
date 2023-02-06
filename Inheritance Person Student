@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner ac = new Scanner(System.in);
+        String[] arr1 = new String[3];
+        for(int i=0;i<3;i++){
+            arr1[i] = ac.next();
+        }
+        int a = ac.nextInt();
+        Integer[] arr2 = new Integer[a];
+        for(int i=0;i<a;i++){
+            arr2[i] = Integer.parseInt(ac.next()); 
+        }
+        int avg=0;
+        int sum=0;
+        for(int i=0;i<a;i++){
+            sum+=arr2[i];
+        }
+        avg = (int) (sum/a);
+        System.out.println("Name: "+arr1[1]+", "+arr1[0]);
+        System.out.println("ID: "+arr1[2]);
+        if(avg<=100 && avg>=90){
+            System.out.println("Grade: O");
+        }
+        else if(avg<90 && avg>=80){
+            System.out.println("Grade: E");      
+        }
+        else if(avg<80 && avg>=70){
+            System.out.println("Grade: A");      
+        }
+        else if(avg<70 && avg>=55){
+            System.out.println("Grade: P");      
+        }
+        else if(avg<55 && avg>=40){
+            System.out.println("Grade: D");      
+        }
+        else{
+            System.out.println("Grade: T");      
+        }
+    }
+}
