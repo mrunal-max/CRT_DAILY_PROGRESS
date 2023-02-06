@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int b =a.nextInt();
+        for(int i=0;i<b;i++){
+            int age = a.nextInt();
+            int s= age+3;
+            if(age==-1){
+                System.out.println("Age is not valid, setting age to 0.");
+                System.out.println("You are young.");
+                System.out.println("You are young.\n");
+            }
+            else if(age<13){
+                if(s<13){
+                    System.out.println("You are young.");
+                    System.out.println("You are young.\n");
+                }
+                else if(s>=13 && s<18){
+                    System.out.println("You are young.");
+                    System.out.println("You are a teenager.\n");
+                }
+                else{
+                    System.out.println("You are young.");
+                    System.out.println("You are old.\n");
+                }
+            }
+            else if(age>=13 && age<18){
+                if(s>=16 && s<18){
+                    System.out.println("You are a teenager.");
+                    System.out.println("You are a teenager.\n");
+                }
+                else{
+                    System.out.println("You are a teenager.");
+                    System.out.println("You are old.\n");
+                }
+            }
+            else{
+                System.out.println("You are old.");
+                System.out.println("You are old.");
+            }
+        }
+    }
+}
